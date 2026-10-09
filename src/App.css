@@ -1,0 +1,104 @@
+/* Estilo geral da página: fundo escuro, texto claro, fonte do sistema */
+body { 
+  margin: 0; 
+  background: #0d0b1a; 
+  color: #eee; 
+  font-family: system-ui, sans-serif; 
+}
+
+/* Centraliza o conteúdo e limita a largura máxima */
+.app { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 32px 16px; 
+}
+
+/* Título e destaque roxo na palavra "Hub" */
+h1 { 
+  font-size: 2.5rem; 
+  margin: 0; 
+}
+
+h1 span { 
+  color: #a855f7; 
+}
+
+header p { 
+  color: #9ca3af; 
+}
+
+/* Campo de busca */
+input { 
+  width: 100%; 
+  padding: 12px; 
+  border-radius: 10px; 
+  border: 1px solid #3b3566;
+  background: #17132b; 
+  color: #fff; 
+  box-sizing: border-box; 
+}
+
+/* Botões de categoria (pílulas) lado a lado, quebrando linha se faltar espaço */
+.filtros { 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap; 
+  margin: 16px 0; 
+}
+
+.filtros button { 
+  background: #17132b; 
+  color: #ddd; 
+  border: 1px solid #3b3566;
+  padding: 6px 14px; 
+  border-radius: 999px; 
+  cursor: pointer; 
+}
+
+.filtros button.ativo { 
+  background: #a855f7; 
+  border-color: #a855f7; 
+  color: #fff; 
+}
+
+/* Grade responsiva: cria quantas colunas de 260px couberem na tela */
+.grid { 
+  display: grid; 
+  grid-template-columns: 
+  repeat(auto-fill, 
+  minmax(260px, 1fr)); 
+  gap: 16px; }
+
+/* Card + efeito de subir e brilhar ao passar o mouse */
+.card { 
+  background: #17132b; 
+  border: 1px solid #3b3566; 
+  border-radius: 14px; 
+  padding: 20px;
+  transition: transform .2s, box-shadow .2s; 
+}
+
+.card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 24px #a855f755; 
+}
+
+.tag { 
+  font-size: .75rem; 
+  color: #c084fc; 
+}
+
+/* Botão de favoritar (vazio) e quando está ativo (preenchido) */
+.fav { 
+  background: none; 
+  border: 1px solid #a855f7; 
+  color: #c084fc;
+  padding: 6px 12px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+.fav.ativo { 
+  background: #a855f7; 
+  color: #fff; 
+}
